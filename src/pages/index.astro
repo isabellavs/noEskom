@@ -5,7 +5,8 @@ import Layout from '../layouts/Layout.astro';
 <script>
 	async function getData() {
 		try {
-			await fetch('http://192.168.55.241:8000/')
+			// DoTHIS: Change 'xxx.xxx.xx.xxx' to the IP of the host on which the flask server runs
+			await fetch('http://xxx.xxx.xx.xxx:8000/')
 			.then((response) => {return response.json()})
 			.then((stage) => {
 
