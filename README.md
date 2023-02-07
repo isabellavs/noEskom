@@ -10,4 +10,4 @@ Click the buttons and see what happens.
 ## Backend server:
 
 A flask server serving this site was developed to run on the same network, in this specific case, the sever ran on Windows WSL and the web page on Windows 10.
-You can find the code for the server in the flaskEskom repo.
+You can find the code for the server in the 'flaskEskom' repo.
