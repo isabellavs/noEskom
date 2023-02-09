@@ -1,5 +1,6 @@
 # Thanks Eskom. How many candles do I need?
 
+![Loadshedding Stage](./Screenshot.png)
 ## About this project:
 
 The web frontend was created with Astro, the backend uses Python's Flask framework.

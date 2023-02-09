@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 	async function getData() {
 		try {
 			// DoTHIS: Change 'xxx.xxx.xx.xxx' to the IP of the host on which the flask server runs
-			await fetch('http://xxx.xxx.xx.xxx:8000/')
+			await fetch('http://xxx.xxx.xxx.xxx:8000/')
 			.then((response) => {return response.json()})
 			.then((stage) => {
 
@@ -15,7 +15,6 @@ import Layout from '../layouts/Layout.astro';
 				const fetcher = document.getElementById('stage')
 				var candles = Number(stage.data) - 1;
 				var candleStr = "";
-				console.log('candles:', candles)
 				// candles = 0 // test
 
 				if (candles <= 0) {
@@ -34,15 +33,12 @@ import Layout from '../layouts/Layout.astro';
 					fetcher.innerHTML = "Stage " + candles
 				}
 
-				console.log(candleStr)
 				flaming.style.transform = 'scale(1,1)'
 				flaming.innerHTML = candleStr;
-				console.log(flaming.innerHTML)
 			})
 		}
 		catch(ERR) {
-			console.log('not spliffy error', ERR)
-			return -1
+			return 404
 		}
 	}
 
